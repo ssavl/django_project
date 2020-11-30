@@ -1,0 +1,11 @@
+{% load static %}
+<html>
+<head>
+    <title>{% block title %}Блог Django{% endblock %}</title>
+</head>
+<body>
+    <img src="{% static "images/sitelogo.png" %}" alt="Logo">
+    <a href="http://127.0.0.1:8000/" class="button">Главная</a>
+    {% block content %}{% endblock %}
+</body>
+</html>

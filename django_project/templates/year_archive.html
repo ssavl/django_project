@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Статьи за {{ year }} год {% endblock %}
+
+{% block content %}
+<h1>Статьи за {{ year }} год</h1>
+
+{% for article in article_list %}
+    <p> ------------------------------------------------------------------ </p>
+    <p>{{ article.headline }}</p>
+    <p>By {{ article.reporter.full_name }}</p>
+    <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
+{% endfor %}
+{% endblock %}
