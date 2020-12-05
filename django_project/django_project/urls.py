@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/<int:year>/', views.year_archive),
     path('articles/<int:year>/<int:month>/', views.month_archive),
-    path('articles/<int:year>/<int:month>/<int:pk>/', views.article_detail),
+    path('articles/<int:year>/<int:month>/<int:id>/', views.article_detail),
+    path('<int:pk>/', views.article_id),
     path('', views.start)
 
 ]

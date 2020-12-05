@@ -7,7 +7,10 @@
 
 {% for article in article_list %}
     <p> ------------------------------------------------------------------ </p>
-    <p>{{ article.headline }}</p>
+    <h2>{{ article.headline }}</h2>
+    <p></p>
+    <p>{{ article.content }}</p>
+    <p></p>
     <p>By {{ article.reporter.full_name }}</p>
     <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
 {% endfor %}
