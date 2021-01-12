@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<!--{% for article in random_article %}-->
+<!--    {{ article.title }}-->
+<!--{% endfor %}-->
+
+{% for article in articles_view %}
+    <p> ------------------------------------------------------------------ </p>
+    <h2>{{ article.headline }}</h2>
+    <p></p>
+    <p>{{ article.content }}</p>
+    <p></p>
+    <p>By {{ article.reporter.full_name }}</p>
+    <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
+{% endfor %}
+
+<!--{% for article in random_articles %}-->
+
+<!--{{ article.content }}-->
+
+<!--{% endfor %}-->
+
+
+<!--{{ random_articles }}-->
+
+
+{% endblock %}

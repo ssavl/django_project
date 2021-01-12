@@ -19,8 +19,10 @@ from my_app import views
 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('archive/articles', views.articles_view),
     path('articles/<int:year>/', views.year_archive),
     path('articles/<int:year>/<int:month>/', views.month_archive),
     path('articles/<int:year>/<int:month>/<int:id>/', views.article_detail),
@@ -28,5 +30,6 @@ urlpatterns = [
     path('', views.start),
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/', include('my_app.urls')),
+    path('users/', include('app_users.urls'), name='users'),
 
 ]

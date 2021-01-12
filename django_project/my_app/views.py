@@ -50,16 +50,22 @@ class ArticleListView(APIView):
 
 
 
-
+a = 'blah blah blah'
 
 
 # -------------------------------------------------------------------
 # ----------------------------Вьюхи для сайта------------------------
 # -------------------------------------------------------------------
 
-def start(request):
-    return render(request, 'index.html')
 
+def start(request):
+    return render(request, 'index.html', {'var': a})
+
+
+def articles_view(request):
+    random_article = Article.objects.all()
+    context = {'articles_view': random_article}
+    return render(request, 'articles.html', context=context)
 
 
 def year_archive(request, year):
