@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup as bs
 from pymongo import MongoClient
+from config import client
 
-client = MongoClient('mongodb+srv://megauser:YNiTjy5QarJBO3XN@cluster0.h4sze.mongodb.net/<dbname>?retryWrites=true&w=majority')
 
 db = client.testdb
 list_of_article = []
