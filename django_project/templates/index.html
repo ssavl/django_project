@@ -19,6 +19,7 @@
 
 <!---------------------------Carusel---------------------------------->
 
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -52,8 +53,9 @@
     <div class="container">
 
         <div class="row">
-            <p class="text-center">--------------------------------------------------------------------------------</p>
         </div>
+        <br>
+        <br>
 
         <div class="row text-center center">
             <h3 color=red>Статьи за какой год вас интересуют?</h3>
@@ -78,6 +80,30 @@
     </div>
 
     </div>
+    <br>
+    <br>
+
+<!-------------------------------------FORM-------------------------------------------->
+    <div class="container">
+        <h2 class="text-center">Написать новую статью:</h2>
+        <br>
+
+        <div class="mb-3">
+        <form method="post">
+         {% csrf_token %}
+         <label for="exampleFormControlInput1" class="form-label" >Заголовок</label>
+         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Заголовок статьи" name="title">
+         </div>
+         <div class="mb-3">
+         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text"></textarea>
+         <br>
+         <input type="submit" value="Submit" class="btn btn-primary mb-3">
+        </form>
+        </div>
+
+    </div>
+
 
 
 {% endblock %}
